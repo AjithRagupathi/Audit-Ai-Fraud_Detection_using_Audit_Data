@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        /* Apply basic styles */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .result-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .result-text {
+            font-size: 18px;
+            color: #c07a7a;
+            font-weight: bold;
+            text-align: center;
+            animation: scaleIn 0.5s ease;
+        }
+
+        /* Additional styles based on result value */
+        .result-container.success {
+            border-color: #4CAF50;
+            background-color: #E8F5E9;
+        }
+
+        .result-container.warning {
+            border-color: #FFC107;
+            background-color: #FFF8E1;
+        }
+
+        .result-container.error {
+            border-color: #F44336;
+            background-color: #FFEBEE;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    <script>
+        // Get the result value from the server or set it manually
+        var resultValue = "{{ predict }}"; // Replace "{{ predict }}" with the actual result value
+
+        // Add class to the result container based on the result value
+        document.addEventListener('DOMContentLoaded', function() {
+            var resultContainer = document.querySelector('.result-container');
+            if (resultValue === 'success') {
+                resultContainer.classList.add('success');
+            } else if (resultValue === 'warning') {
+                resultContainer.classList.add('warning');
+            } else if (resultValue === 'error') {
+                resultContainer.classList.add('error');
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Result</h1>
+    <div class="result-container">
+        <p class="result-text">{{ predict }}</p>
+    </div>
+</body>
+</html>

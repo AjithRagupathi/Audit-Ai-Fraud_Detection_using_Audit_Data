@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Apply basic styles to the form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style the labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #c07a7a;
+}
+
+/* Style the text inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c9c7c7;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style the heading */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Apply background and padding to the body */
+body {
+  background-color: #b2ece9;
+  padding: 20px;
+}
+
+/* Additional styling for an attractive appearance */
+
+/* Background and border for the form container */
+.container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some spacing between the form elements */
+form > * {
+  margin-bottom: 15px;
+}
+
+/* Add a subtle box-shadow effect to the text inputs */
+input[type="text"] {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a gradient background to the submit button */
+input[type="submit"] {
+  background: linear-gradient(to bottom, #4CAF50, #45a049);
+}
+
+/* Style the result container */
+.result {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Color the result text */
+.result p {
+  color: #c07a7a;
+  font-weight: bold;
+  font-size: 18px;
+}

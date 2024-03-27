@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* CSS styles specific to this page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff; /* Updated background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin: 40px 0 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin: 0 0 30px;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .button-container a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-container {
+            margin: 0 auto;
+            max-width: 750px; /* Increased image container width */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+        
+            border-radius: 8px;
+        }
+    </style>
+    <title>Welcome to My Project</title>
+</head>
+<body>
+    <h1>Welcome to Audit AI Home page</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='indexpage.png') }}" alt="Project Image" class="project-image">
+    </div>
+    <p>Audit AI: A Machine Learning for Detecting Fraud in Audit Data</br>"Description about our site click learn more"</p>
+    <div class="button-container">
+        <a href="/project" class="button">Learn More</a>
+        <a href="/riskpred" class="button">Start Prediction</a>
+    </div>
+</body>
+</html>
