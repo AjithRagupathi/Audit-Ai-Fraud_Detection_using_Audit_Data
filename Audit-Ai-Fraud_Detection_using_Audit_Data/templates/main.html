@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Main Page</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Detecting Fraud in Audit Data</h1>
+        <form action="/riskpred" method="POST">
+            <label for="Sector_score">Sector Score:</label>
+            <input type="number" name="Sector_score" step="any" required>
+            <label for="PARA A">PARA A:</label>
+            <input type="number" name="PARA A" step="any" required><br><br>
+
+            <label for="Risk A">Risk A:</label>
+            <input type="number" name="Risk A" step="any" required><br><br>
+
+            <label for="PARA_B">PARA B:</label>
+            <input type="number" name="PARA_B" step="any" required><br><br>
+
+            <label for="Risk B">Risk B:</label>
+            <input type="number" name="Risk B" step="any" required><br><br>
+
+            <label for="TOTAL">TOTAL:</label>
+            <input type="number" name="TOTAL" step="any" required><br><br>
+
+            <label for="numbers">Numbers:</label>
+            <input type="number" name="numbers" step="any" required><br><br>
+
+            <label for="Money_Value">Money Value:</label>
+            <input type="number" name="Money_Value" step="any" required><br><br>
+
+            <label for="Score_MV">Score MV:</label>
+            <input type="number" name="Score_MV" step="any" required><br><br>
+
+            <label for="District_Loss">District Loss:</label>
+            <input type="number" name="District_Loss" step="any" required><br><br>
+
+            <label for="History">History:</label>
+            <input type="number" name="History" step="any" required><br><br>
+
+            <label for="Score">Score:</label>
+            <input type="number" name="Score" step="any" required><br><br>
+
+            <label for="Inherent Risk">Inherent Risk:</label>
+            <input type="number" name="Inherent Risk" step="any" required><br><br>
+
+            <label for="Audit_Risk">Audit Risk:</label>
+            <input type="number" name="Audit_Risk" step="any" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
